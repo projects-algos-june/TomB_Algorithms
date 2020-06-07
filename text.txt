@@ -1,0 +1,12 @@
+My project will be call "My Bench" and the MVP will consist of a 
+log and reg page
+A welcome page
+An all users page to scroll through users to check out
+A users page with a link to that users gallery of jewelery
+Each gallery pic will have a link to a page about that piece
+
+Product Backlog
+Whats new on Welcome page
+A real time price of gold and silver on welcome page
+A comment on a specific users piece and notification to user of new comment.
+A follow and following link on user My Page
