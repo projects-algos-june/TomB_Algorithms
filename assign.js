@@ -95,50 +95,130 @@
 // console.log(minToFront(arr));
 
 
-To Do 2
+// To Do 2
 
-function reverse(arr) {
-    // loop through half of the array
-    for(var i=0; i<arr.length/2; i++) {
-        // swap values across midpoint
-        var temp = arr[i];
-        arr[i] = arr[arr.length-1-i];
-        arr[arr.length-1-i] = temp;
-    }
-}
+// function reverse(arr) {
+//     // loop through half of the array
+//     for(var i=0; i<arr.length/2; i++) {
+//         // swap values across midpoint
+//         var temp = arr[i];
+//         arr[i] = arr[arr.length-1-i];
+//         arr[arr.length-1-i] = temp;
+//     }
+// }
 
-function rotate(arr, shiftBy) {
-	let t = Math.abs(shiftBy);
-	while(t > 0) {
+// function rotate(arr, shiftBy) {
+// 	let t = Math.abs(shiftBy);
+// 	while(t > 0) {
 
-		if(shiftBy > 0) {
-			let temp = arr[arr.length-1]
+// 		if(shiftBy > 0) {
+// 			let temp = arr[arr.length-1]
 			
-			for(let i = arr.length - 1; i > 0; i--)
-				arr[i] = arr[i-1];
-			arr[0] = temp;
+// 			for(let i = arr.length - 1; i > 0; i--)
+// 				arr[i] = arr[i-1];
+// 			arr[0] = temp;
 
-		} else {
-			let temp = arr[0];
-			for(let i = 0; i < arr.length - 1; i++) {
-				arr[i] = arr[i + 1];
-			}
-			arr[arr.length-1] = temp;
-		}
-		t--;
-	}
-}
+// 		} else {
+// 			let temp = arr[0];
+// 			for(let i = 0; i < arr.length - 1; i++) {
+// 				arr[i] = arr[i + 1];
+// 			}
+// 			arr[arr.length-1] = temp;
+// 		}
+// 		t--;
+// 	}
+// }
 
-function filterRange(arr, min, max) {
-	for(let i = 0; i < arr.length; i++) {
-		if(arr[i] > min && arr[i] < max) {
-			for(let j = i; j < arr.length - 1; j++) {
-                arr[j] = arr[j + 1];
-            }
-            arr.length = arr.length - 1;
-			i--;
-		}
-	}
-}
+// function filterRange(arr, min, max) {
+// 	for(let i = 0; i < arr.length; i++) {
+// 		if(arr[i] > min && arr[i] < max) {
+// 			for(let j = i; j < arr.length - 1; j++) {
+//                 arr[j] = arr[j + 1];
+//             }
+//             arr.length = arr.length - 1;
+// 			i--;
+// 		}
+// 	}
+// }
 
-Working on Concat and all of these over and over!
+// Working on Concat and all of these over and over!
+
+// Strings To Do 1
+
+// Romove Blanks
+
+// var str = "Pl ayTha tF u nkyM usi c";
+// function removeBlanks(str) {
+// 	return str.split(" ").join("");
+	
+// }
+
+// console.log(str.split(" ").join(""));
+
+// Get Digits
+
+// var str = "0s1a3y5w7h9a2t4?6!8?0";
+// function getDigits(str) {
+// 	var stringArr = str.split("");
+// 	var intStr = "";
+// 	console.log(stringArr)
+// 	for (var ind = 0; ind < stringArr.length; ind++) {
+// 		if (stringArr[ind]%1 == 0) {
+// 			intStr += stringArr[ind];
+// 		}
+// 	}
+// 	return intStr;
+// }
+
+// console.log(getDigits("0s1a3y5w7h9a2t4?6!8?0"));
+
+//Acronyms
+// var str = "Live from New York, it's Saturday Night!"
+// function acronyms(str) {
+//     var strArr = str.split(" ");
+//     var retStr = "";
+//     for (var ind = 0; ind < strArr.length; ind++) {
+//         if (strArr[ind] == false) {
+//             continue;
+//         } else {
+// 			retStr += strArr[ind][0].toUpperCase();
+//         }
+//     }
+// 	return retStr;
+// }
+
+//     console.log(acronyms("Live from New York, it's Saturday Night!"));
+
+// // Count Non-Spaces
+
+// var str = "These algorithms are challenging but fun!"
+// function countNS(str) {
+//     var strArr = str.split("");
+//     var count = 0;
+//     for (var ind = 0; ind < strArr.length; ind++) {
+//         if (strArr[ind] == false) {
+//             continue;
+//         } else {
+//             count++;
+//         }
+//     }
+//     return count;
+// }
+// console.log(countNS("These algorithms are challenging but fun!"));
+
+// // Remove Shorter Strings
+
+// function removeShort(strArr, val) {
+//     for (var ind = strArr.length-1; ind >= 0; ind--) {
+//         if (strArr[ind].length < val) {
+//             for (var i = ind; i < strArr.length-1; i++){
+//                 var temp = strArr[i];
+//                 strArr[i] = strArr[i+1];
+// 				strArr[i+1] = temp;
+//             }
+// 			 strArr.pop();
+//         }
+//     }
+//     return strArr;
+// }
+// console.log(removeShort(["out", "test", "code", "now"], 4));
