@@ -10,3 +10,30 @@ Whats new on Welcome page
 A real time price of gold and silver on welcome page
 A comment on a specific users piece and notification to user of new comment.
 A follow and following link on user My Page
+
+
+insert(val, index) {
+    if (index > 0 && index > this.size) {
+      console.log(`Index is out of range`);
+      return;
+    }
+    let newNode = new Node(val);
+    let current = this.head;
+    let prev;
+    if (index === 0) {
+      newNode.next = head;
+      this.head = newNode;
+    } else {
+      current = this.head;
+      let position = 0;
+      while (position < index) {
+        position++;
+        prev = current;
+        current = current.next;
+      }
+      newNode.next = current;
+      prev.next = newNode;
+    }
+    this.size++;
+  }
+}
