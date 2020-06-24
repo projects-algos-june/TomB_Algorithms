@@ -32,16 +32,14 @@ add(val) {
 
 max(){
     if (this.head === null) {
-        console.log("This list is empty");
         return this
     } else {
-        let max = this.head.value;
+        let max = this.head.val;
         let current = this.head;
         while(current) {
-            if (current.value > max) {
-                max = current.value;
+            if (current.val > max) {
+                max = current.val;
             }
-            // console.log(current.value);
             current = current.next;
             
         }
@@ -49,27 +47,31 @@ max(){
     }
 }
 
-// maxMinAvg() {
-//     var sum = 0;
-//     var max = this.head.value;
-//     var min = this.head.value;
-//     var runner = this.head;
-//     while(runner) {
-//         sum += runner.value;
-//         if(runner.value > max) {
-//             max = runner.value;
-//         }
-//         else if(runner.value < min) {
-//             min = runner.value;
-//         }
-//         runner = runner.next
-//     }
-//      return `max: ${max}, min: ${min}', avg: ${sum/this.length}`
-// }
+                   
+maxMinAvg() {
+    var sum = 0;
+    var max = this.head.val;
+    var min = this.head.val;
+    var runner = this.head;
+    while(runner) {
+        sum += runner.val;
+        if(runner.val > max) {
+            max = runner.val;
+        }
+        else if(runner.val < min) {
+            min = runner.val;
+        }
+        runner = runner.next
+    }
+     return `max: ${max}, min: ${min}, avg: ${sum/this.size}`
+}
 }
 
 let list =  new LinkedList();
 list.add(12);
 list.add(24);
 list.add(36);
+list.add(10);
+list.add(50);
 console.log(list.max());
+console.log(list.maxMinAvg());
